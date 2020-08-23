@@ -42,6 +42,7 @@ public class RunTest {
 		takeSnap();
 		System.out.println(country);
 		driver.findElement(By.linkText("Log Out")).click();
+		Thread.sleep(2000);
 		driver.close();		
 	}
 
