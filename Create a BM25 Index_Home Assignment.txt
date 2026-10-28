@@ -1,0 +1,90 @@
+Create a BM25 Index
+
+Go to search & vector search
+
+Click Create search index
+
+Select atlas search 
+
+select the respective database and collection (testcases)
+Click Json editor
+
+paste the index definition below
+
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "id": {
+        "type": "string",
+        "analyzer": "lucene.keyword"
+      },
+      "module": {
+        "type": "string",
+        "analyzer": "lucene.standard"
+      },
+      "title": {
+        "type": "string",
+        "analyzer": "lucene.standard"
+      },
+      "description": {
+        "type": "string",
+        "analyzer": "lucene.standard"
+      },
+      "steps": {
+        "type": "string",
+        "analyzer": "lucene.standard"
+      },
+      "expectedResults": {
+        "type": "string",
+        "analyzer": "lucene.standard"
+      },
+      "preRequisites": {
+        "type": "string",
+        "analyzer": "lucene.standard"
+      },
+      "automationManual": {
+        "type": "string",
+        "analyzer": "lucene.keyword"
+      },
+      "priority": {
+        "type": "string",
+        "analyzer": "lucene.keyword"
+      },
+      "risk": {
+        "type": "string",
+        "analyzer": "lucene.keyword"
+      },
+      "type": {
+        "type": "string",
+        "analyzer": "lucene.keyword"
+      },
+      "linkedStories": {
+        "type": "string",
+        "analyzer": "lucene.keyword"
+      },
+      "createdBy": {
+        "type": "string",
+        "analyzer": "lucene.keyword"
+      },
+      "version": {
+        "type": "string",
+        "analyzer": "lucene.keyword"
+      }
+    }
+  }
+}
+
+
+click next and create search index
+
+
+Update .env file 
+
+npm install
+npm run dev
+
+explore till hybrid search
+
+
+
